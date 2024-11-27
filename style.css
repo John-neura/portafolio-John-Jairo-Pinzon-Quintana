@@ -1,0 +1,806 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+*  {
+    
+    padding: 0;
+    margin:0;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+
+
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    display:flex;
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+    padding: 1rem;
+    
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    /*text-align: left;*/
+    margin-right: auto;
+}
+
+.navegacion__elemento a {
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: flex-end;
+    flex-direction: row;
+    
+
+}
+/* ------------------------------ Sección Presentación ------------------------------*/
+
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+    @media (max-width: 768px) {
+        /* Cabecera */
+        .cabecera {
+            flex-direction: row; /* Cambia a disposición en fila */
+            justify-content: space-between; /* Espacio entre los elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+        }
+    
+        .cabecera__logo {
+            width: 60px; /* Ajustar el tamaño del logo */
+        }
+    
+        .cabecera__titulo {
+            font-size: 1rem; /* Reducir tamaño de texto */
+        }
+    
+        .Correo__eletronico {
+            font-size: 0.9rem;
+        }
+    
+        .navegacion__lista {
+            display: none;
+        }
+    
+        
+    
+        /* Presentación */
+        .presentacion {
+            flex-direction: column; /* Cambiar a columna */
+            
+        }
+    
+        .presentacion_contenido {
+            display: flex;
+            flex-direction: column; /* Elementos en columna */
+            
+            
+        }
+    
+        /* Asegurarte de que la foto aparece al principio */
+        
+    
+        .presentacion__foto {
+            max-width: 150px; /* Reducir tamaño de la foto */
+            margin: 0 auto 20px;
+            order: -1; /* Mueve la imagen al principio */
+            max-width: 150px; /* Mantener tamaño reducido */
+            margin: 0 auto 20px; /* Centrado horizontal y separación inferior */
+        }
+    
+    
+            /* Alinear el texto de forma justificada y ocupar todo el ancho */
+            .presentacion__titulo,
+            .presentacion__subtitulo {
+                text-align: justify; /* Justificar el texto */
+                margin: 0; /* Eliminar márgenes laterales */
+                padding: 0 10px; /* Espacio interno para evitar que toque los bordes */
+                line-height: 1.6; /* Mejorar la separación entre líneas */
+                width: 100%; /* Ocupa todo el ancho disponible */
+            }
+        
+            /* Ajustar el contenedor */
+            .presentacion__contenedor {
+                padding: 0; /* Sin espaciado adicional */
+                width: 100%; /* Ocupa todo el ancho */
+            }
+        
+        
+    
+        .redes {
+            flex-direction: column; /* Redes en columna */
+            gap: 10px;
+        }
+    
+        /* Sección Sobre Mí */
+        .sobre-mi__texto {
+            font-size: 0.9rem; /* Reducir el tamaño del texto */
+        }
+    
+        /* Habilidades y Aficiones */
+        .habilidades__lista,
+        .aficiones__lista {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 10px;
+        }
+    
+        /* Formación */
+        .formacion__lista {
+            grid-template-columns: repeat(1, 1fr); /* Una sola columna */
+        }
+    
+        /* Proyectos */
+        .proyectos__contenedor {
+            flex-direction: column; /* Cambiar a columna */
+            align-items: center;
+            text-align: center;
+        }
+    
+        .proyectos__contenedor img {
+            max-width: 100%; /* Imagen ajustable */
+            height: auto;
+        }
+    
+        /* Contacto */
+        .contacto__formulario {
+            flex-direction: column; /* Formulario en columna */
+            gap: 2rem;
+            width: 100%; /* Ancho completo */
+            padding: 20px; /* Espaciado interno para mayor legibilidad */
+            box-sizing: border-box; /* Incluir el padding en el tamaño total */
+            align-items: center; /* Centrar horizontalmente */
+            justify-content: center; /* Centrar verticalmente */
+        }
+    
+        .contenido_anuncio {
+            display: flex;
+            flex-direction: column; /* Alinear los elementos en columna */
+            align-items: center; /* Centrar horizontalmente */
+            justify-content: center; /* Centrar verticalmente */
+            gap: 15px; /* Espacio entre los elementos */
+        }
+    }
+        .contacto__formulario img {
+            display: none;
+        }
+    
+        .contacto__campo {
+            width: 100%; /* Ancho completo */
+        }
+    
+        .contacto__titulo {
+            font-size: 1.2rem; /* Ajustar el tamaño del título */
+        }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}
+
+.presentacion_contenido {
+    display: flex;
+    flex-direction: row-reverse; /* Invertir el orden de los elementos para que la imagen quede a la derecha */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Asegurar que los elementos ocupen todo el ancho disponible */
+    gap: 2rem; /* Separación entre la imagen y el texto */
+    margin: 0 8rem; /* Espacio fuera del contenedor */
+}
+
+.presentacion__foto {
+    max-width: 40%; /* Ajustar el tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 50%; /* Hacer la imagen redonda si es cuadrada */
+}
+
+.presentacion__contenedor {
+    max-width: 55%; /* Limitar el ancho del contenido textual */
+}
+
+
+
+.redes {
+    list-style: none; /* Eliminar viñetas de la lista */
+    padding: 0; /* Eliminar relleno predeterminado */
+    margin: 1rem 0 0 0; /* Agregar margen solo en la parte superior */
+    display: flex;
+    flex-direction: row; /* Colocar los elementos en columna */
+    gap: 2rem; /* Espacio entre los enlaces */
+}
+
+.redes__img a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    color: #000; /* Color del texto del enlace */
+    font-weight: bold; /* Hacer los enlaces más visibles */
+    display: flex;
+    align-items: center; /* Centrar la flecha verticalmente */
+    gap: 0.5rem; /* Espacio entre el texto y la flecha */
+}
+
+.sobre-mi {
+    padding: 0 8rem; /* Espacio interno a los lados (izquierda y derecha) */
+    margin: 0 auto; /* Centrar la sección si tiene un ancho fijo */
+    max-width: 1200px; /* Limitar el ancho máximo de la sección para mejor diseño */
+    background-color: #AFEEEE;
+}
+
+.sobre-mi__titulo {
+    font-size: 2rem; /* Ajustar tamaño del título */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    text-align: center; /* Centrar el título */
+}
+
+.sobre-mi__texto {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 1.5rem; /* Espacio entre párrafos */
+    text-align: justify; /* Alinear el texto para una apariencia más profesional */
+}
+
+.sobre-mi__firma {
+    display: block; /* Asegurar que se comporte como un bloque */
+    margin: 1rem auto 0; /* Centrar la imagen horizontalmente */
+    max-width: 150px; /* Limitar el tamaño máximo de la firma */
+}
+.habilidades{
+    text-align: center; /* Centra el título horizontalmente */
+    padding: 2rem 1rem; /* Espaciado interno */
+}
+
+.habilidades__titulo {
+    font-size: 2rem; /* Tamaño del título */
+    margin-bottom: 2rem; /* Espaciado debajo del título */
+}
+
+.habilidades__lista {
+    display: flex; /* Convierte la lista en un contenedor flexible */
+    justify-content: space-between; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los cuadros se ajusten a otra línea si es necesario */
+    gap: 1.5rem; /* Espaciado entre los cuadros */
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    margin: 0 5rem;
+}
+
+.habilidades__elemento {
+    display: flex; /* Flexbox para organizar ícono y texto */
+    flex-direction: column; /* Ícono arriba, texto abajo */
+    justify-content: space-between; /* Espaciado entre ícono y nombre */
+    align-items: center; /* Centra ícono y texto horizontalmente */
+    text-align: center; /* Texto centrado */
+    background-color: #f0f8ff; /* Fondo del cuadro */
+    border: 1px solid #dcdcdc; /* Borde alrededor del cuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante */
+    width: auto; /* Tamaño ajustado al contenido horizontalmente */
+    height: auto; /* Tamaño ajustado al contenido verticalmente */
+    min-width: 120px; /* Ancho mínimo para mantener consistencia */
+    max-width: 150px; /* Ancho máximo para evitar cuadros demasiado grandes */
+    
+}
+
+.habilidades__icono {
+    width: 50px; /* Tamaño del ícono */
+    height: auto; /* Mantiene proporción del ícono */
+    margin-bottom: 0.5rem; /* Espacio entre ícono y nombre */
+}
+
+.habilidades__nombre {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin-top: auto; /* Empuja el nombre hacia la parte inferior del cuadro */
+}
+
+
+.aficiones {
+    text-align: center; /* Centra el título horizontalmente */
+    padding: 2rem 1rem; /* Espaciado interno */
+}
+
+.aficiones__titulo {
+    font-size: 2rem; /* Tamaño del título */
+    margin-bottom: 2rem; /* Espaciado debajo del título */
+}
+
+.aficiones__lista {
+    display: flex; /* Convierte la lista en un contenedor flexible */
+    justify-content: space-between; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los cuadros se ajusten a otra línea si es necesario */
+    gap: 1.5rem; /* Espaciado entre los cuadros */
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    margin: 0 5rem;
+}
+
+.aficiones__elemento {
+    display: flex; /* Flexbox para organizar ícono y texto */
+    flex-direction: column; /* Ícono arriba, texto abajo */
+    justify-content: space-between; /* Espaciado entre ícono y nombre */
+    align-items: center; /* Centra ícono y texto horizontalmente */
+    text-align: center; /* Texto centrado */
+    background-color: #f0f8ff; /* Fondo del cuadro */
+    border: 1px solid #dcdcdc; /* Borde alrededor del cuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante */
+    width: auto; /* Tamaño ajustado al contenido horizontalmente */
+    height: auto; /* Tamaño ajustado al contenido verticalmente */
+    min-width: 120px; /* Ancho mínimo para mantener consistencia */
+    max-width: 150px; /* Ancho máximo para evitar cuadros demasiado grandes */
+}
+
+.aficiones__icono {
+    width: 50px; /* Ajusta el tamaño del ícono */
+    height: auto; /* Mantiene las proporciones */
+    margin-bottom: 0.5rem; /* Espacio debajo del ícono */
+}
+
+.aficiones__nombre {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin-top: auto; /* Empuja el nombre hacia la parte inferior del cuadro */
+}
+
+
+.formacion {
+    text-align: center; /* Centra el título horizontalmente */
+    padding: 2rem 1rem; /* Espaciado interno */
+    background-color: #AFEEEE;
+}
+
+.formacion__titulo {
+    font-size: 2rem; /* Tamaño del título */
+    margin-bottom: 2rem; /* Espaciado debajo del título */
+}
+
+.formacion__lista {
+    display: flex; /* Convierte la lista en un contenedor flexible */
+    justify-content: space-between; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los cuadros se ajusten a otra línea si es necesario */
+    gap: 1.5rem; /* Espaciado entre los cuadros */
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    margin: 0 5rem;
+}
+
+.formacion__elemento {
+    display: flex; /* Flexbox para organizar ícono y texto */
+    flex-direction: column; /* Ícono arriba, texto abajo */
+    justify-content: space-between; /* Espaciado entre ícono y contenido */
+    align-items: center; /* Centra ícono y texto horizontalmente */
+    text-align: center; /* Texto centrado */
+    background-color: #f0f8ff; /* Fondo del cuadro */
+    border: 1px solid #dcdcdc; /* Borde alrededor del cuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante */
+    width: auto; /* Tamaño ajustado al contenido horizontalmente */
+    height: auto; /* Tamaño ajustado al contenido verticalmente */
+    min-width: 200px; /* Ancho mínimo para mantener consistencia */
+    max-width: 250px; /* Ancho máximo para evitar cuadros demasiado grandes */
+}
+
+.formacion__icono {
+    width: 60px; /* Ajusta el tamaño del ícono */
+    height: auto; /* Mantiene las proporciones */
+    margin-bottom: 0.5rem; /* Espacio debajo del ícono */
+}
+
+.formacion__nombre {
+    font-size: 1.1rem; /* Tamaño del título de formación */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Resalta el título */
+}
+
+.formacion__detalle {
+    font-size: 0.9rem; /* Tamaño del texto de detalle */
+    color: #555; /* Color para los detalles */
+    margin-top: auto; /* Empuja los detalles hacia la parte inferior del cuadro */
+}
+.proyectos__titulo{
+    text-align: center;
+    margin: 2rem;
+    
+   
+}
+.proyectos__contenedor{
+    display: flex; /* Flexbox para organizar ícono y texto */
+    justify-content: flex-start; /* Espaciado entre ícono y contenido */
+    align-items: center; /* Centra ícono y texto horizontalmente */
+    gap: 2rem;
+    margin: 0 5rem;
+
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    margin: 0 5rem;
+}
+
+button {
+    background-color: #4c4caf; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno (alto y ancho) */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Aparece el puntero al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+}
+.contacto__titulo{
+    text-align: center;
+    margin: 2rem;
+
+}
+
+
+.contacto__formulario {
+    display: flex;
+    align-items: stretch; /* Asegura que la imagen y el formulario tengan la misma altura */
+    gap: 0rem;
+    width: 80%;
+    margin: 0 5rem;
+    
+    
+    
+    
+}
+.contenido_anuncio{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    display: flex;
+    align-items: stretch; /* Asegura que la imagen y el formulario tengan la misma altura */
+    flex: 1; /* El formulario ocupará la otra mitad del espacio disponible */
+    justify-content: space-between; /* Distribuye los elementos de arriba hacia abajo */
+    
+
+    
+
+
+}
+
+.contacto__formulario img {
+    flex: 1; /* La imagen ocupará la mitad del espacio disponible */
+    /*width: 100%; /* La imagen ocupa todo el espacio disponible */
+    height: 20%; /* Ajusta la altura de la imagen para que tenga la misma altura que el formulario */
+    object-fit: cover; /* Ajusta la imagen sin deformarse, recortándola si es necesario */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+}
+
+
+.contacto__campo {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%; /* Los campos ocupan todo el espacio disponible */
+}
+
+.contacto__campo--textarea {
+    height: 100px; /* Ajusta la altura del textarea */
+}
+
+.contacto__boton {
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 40%; /* El botón ocupa todo el ancho */
+}
+
+.contacto__boton:hover {
+    background-color: #45a049;
+}
+.autor {
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding: 1rem; /* Opcional: añade espacio alrededor del contenido */
+    background-color: #f8f8f8; /* Opcional: color de fondo */
+}
+
+.autor p {
+    margin: 0.5rem 0; /* Opcional: añade espacio entre los párrafos */
+}
+
+
+
+
+@media  (max-width: 1023px){
+    .navegacion__lista{
+        display: none;
+    }
+
+}
+
+
+
+
+@media(min-width: 1024px){
+    
+    .Correo__eletronico{
+        display: none;
+    }
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Encabezado */
+.cabecera {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+}
+
+.cabecera__logo {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.cabecera__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Correo__eletronico {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.navegacion {
+    margin-top: 1rem;
+}
+
+.navegacion__lista {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.navegacion__elemento a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Presentación */
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.presentacion__foto {
+    border-radius: 50%;
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.redes__img a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    gap: 0.5rem;
+}
+
+/* Secciones Generales */
+section {
+    padding: 2rem 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+li {
+    text-align: center;
+    flex: 1 1 calc(50% - 1rem);
+}
+
+.aficiones__icono, .habilidades__icono {
+    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+/* Formulario de Contacto */
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.contacto__campo {
+    width: 90%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto__boton {
+    padding: 0.8rem 1.5rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto__boton:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.autor {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    font-size: 0.9rem;
+}
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 414px) {
+    .sobre__mi {
+        display: flex;
+        flex-direction: column; /* Distribución vertical */
+        justify-content: space-between; /* Espaciado uniforme */
+        align-items: flex-start; /* Alinear al inicio horizontalmente */
+        max-width: 414px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f0f8ff; /* Color de fondo opcional */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    }
+    .sobre-mi__texto {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+}
